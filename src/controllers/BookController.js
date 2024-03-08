@@ -5,7 +5,7 @@ class BookController {
 // async significa assincrona, algo que acontece depois
 //criar tarefas
     async createBook(req, res) {
-        const {user_id} = req.params;
+        
         const {title, author, numPag, category} = req.body;
 
     const book = {
