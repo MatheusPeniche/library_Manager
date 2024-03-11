@@ -7,6 +7,7 @@ exports.up = (knex) => {
         table.string("password").notNullable();
         table.string("fone").notNullable();
         table.timestamp("dateCreate").defaultTo(knex.fn.now());
+
     })
 };
 
