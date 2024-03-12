@@ -12,11 +12,10 @@ class BookController {
         title,
         author,
         numPag,
-        category,
-        available: false
+        category
     }
 //
-        await knex("books").insert({title: book.title, author: book.author, numPag: book.numPag, category: book.category, available: book.available});
+        await knex("books").insert({title: book.title, author: book.author, numPag: book.numPag, category: book.category});
 
         return res.status(201).json("Livro adicionado na biblioteca!!");
     }

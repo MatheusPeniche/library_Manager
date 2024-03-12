@@ -8,17 +8,17 @@ const bookController = new BookController();
 
 //----------------------------------------------------------------------------//
 
-BookRoutes.post("/books", bookController.createBook);
+BookRoutes.post("/", bookController.createBook);
 
-BookRoutes.get("/books", bookController.listBook);
+BookRoutes.get("/", bookController.listBook);
 
-BookRoutes.get("/books/:id", checkBooksExists, bookController.listBookById);
+BookRoutes.get("/:id", checkBooksExists, bookController.listBookById);
 
-BookRoutes.put("/books/:id", checkBooksExists, bookController.updateBook);
+BookRoutes.put("/:id", checkBooksExists, bookController.updateBook);
 
-BookRoutes.patch("/books/status/:id", checkBooksExists, bookController.updateBookStatus);
+BookRoutes.patch("/status/:id", checkBooksExists, bookController.updateBookStatus);
 
-BookRoutes.delete("/books/:id", checkBooksExists, bookController.deleteBook);
+BookRoutes.delete("/:id", checkBooksExists, bookController.deleteBook);
 
 //-------------------------------------------------------------------------------//
 

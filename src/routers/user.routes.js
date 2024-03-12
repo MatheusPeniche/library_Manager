@@ -8,17 +8,17 @@ const userController = new UserController();
 
 //----------------------------------------------------------------------------//
 
-userRoutes.post("/users", userController.createUser);
+userRoutes.post("/", userController.createUser);
 
-userRoutes.get("/users", userController.listUser);
+userRoutes.get("/", userController.listUser);
 
-userRoutes.get("/users/:user_id", checkUsersExists, userController.listUserById);
+userRoutes.get("/:user_id", checkUsersExists, userController.listUserById);
 
-userRoutes.put("/users/:user_id", checkUsersExists, userController.updateUser);
+userRoutes.put("/:user_id", checkUsersExists, userController.updateUser);
 
 //userRoutes.patch("/users/status/:id", checkUsersExists, userController.updateUserStatus);
 
-userRoutes.delete("/users/:user_id", checkUsersExists, userController.deleteUser);
+userRoutes.delete("/:user_id", checkUsersExists, userController.deleteUser);
 
 //-------------------------------------------------------------------------------//
 
